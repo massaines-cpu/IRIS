@@ -18,9 +18,11 @@ with col2:
     la_se = st.number_input('largeur de la sépale')
 
 if st.button('envoyer'):
-    response = requests.get('http://localhost:8000/predict',
+    response = requests.post('http://localhost:8000/predict',
                            json={'longueur_petale' : lo_pe,
                                 'largeur_petale' : la_pe,
                                 'longueur_sepale' : lo_se,
                                 'largeur_sepale' : la_se })
     data = response.json()
+
+    st.write('espèce prédite:', data['prediction'])
