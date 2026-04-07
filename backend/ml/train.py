@@ -21,4 +21,4 @@ y_predict = model.predict(X_test)
 print('accuary', accuracy_score(y_test, y_predict))
 print('classification report', classification_report(y_test, y_predict))
 
-joblib.dump(model, 'belles_fleurs.joblib')
+joblib.dump(model, '../model/belles_fleurs.joblib')
