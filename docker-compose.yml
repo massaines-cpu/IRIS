@@ -1,0 +1,29 @@
+#docker-compo
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    networks:
+      - rag-network
+
+  front:
+    build:
+      context: .
+      dockerfile: Dockerfile.front
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api
+    environment:
+      - API_URL=http://localhost:8000/
+    networks:
+      - rag-network
+
+networks:
+  rag-network:
+    driver: bridge
