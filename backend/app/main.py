@@ -3,7 +3,7 @@ import fastapi
 import joblib
 from pydantic import BaseModel
 
-modele_path = ('../model/belles_fleurs.joblib')
+modele_path = ('./model/belles_fleurs.joblib')
 modele = joblib.load(modele_path)
 
 app = fastapi.FastAPI()
