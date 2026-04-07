@@ -1,18 +1,26 @@
 #front
 
 import streamlit as st
+import requests
 
-st.title('interface simple, basique, ordinaire, quelconque, sombre, banale et directe')
+st.title('interface simple, basique, ordinaire, quelconque, sombre, banale et directe', text_alignment="center")
+
 col1, col2 = st.columns(2)
+
 with col1:
     st.subheader('données sur les pétales')
-    st.number_input('longueur de la pétale')
-    st.number_input('largeur de la pétale')
+    lo_pe = st.number_input('longueur de la pétale')
+    la_pe = st.number_input('largeur de la pétale')
 
 with col2:
     st.subheader('données sur les sépales')
-    st.number_input('longueur de la sépale')
-    st.number_input('largeur de la sépale')
+    lo_se = st.number_input('longueur de la sépale')
+    la_se = st.number_input('largeur de la sépale')
 
 if st.button('envoyer'):
-    pass
+    response = requests.get('http://localhost:8000/predict',
+                           json={'longueur_petale' : lo_pe,
+                                'largeur_petale' : la_pe,
+                                'longueur_sepale' : lo_se,
+                                'largeur_sepale' : la_se })
+    data = response.json()

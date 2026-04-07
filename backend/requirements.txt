@@ -3,3 +3,4 @@ fastapi
 fastapi[standar]
 pandas
 joblib
+pydantic
