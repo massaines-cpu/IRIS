@@ -1,0 +1,8 @@
+site_name: Projet IRIS
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Model: model.md
+  - API: api.md
+  - Usage: usage.md
