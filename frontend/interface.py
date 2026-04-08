@@ -31,4 +31,7 @@ if st.button('envoyer'):
                                 'largeur_sepale' : la_se })
     data = response.json()
 
-    st.write('espèce prédite:', data['prediction'], text_align="center")
+    st.markdown(
+        f"<p style='text-align: center;'>espèce prédite : {data['prediction']}</p>",
+        unsafe_allow_html=True
+    )
