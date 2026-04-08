@@ -4,7 +4,7 @@ import streamlit as st
 import requests
 from backend.app.main import url
 #interface simple, basique, ordinaire, quelconque, sombre, banale et directe
-st.title('preuve maxime manon', text_alignment="center", color='pink')
+st.title('preuve maxime manooon', text_alignment="center", color='pink')
 
 col1, col2 = st.columns(2)
 
