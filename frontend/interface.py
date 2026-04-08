@@ -4,7 +4,7 @@ import streamlit as st
 import requests
 import os
 
-API_URL = os.getenv('BACKEND_URL', 'http://localhost:8000')
+API_URL = os.getenv('BACKEND_URL')
 
 st.title('interface simple, basique, ordinaire, quelconque, sombre, banale et directe', text_alignment="center")
 

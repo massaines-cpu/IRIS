@@ -2,13 +2,15 @@
 import fastapi
 import joblib
 from pydantic import BaseModel
+from dotenv import load_dotenv
+import os
 
 modele_path = ('./model/belles_fleurs.joblib')
 modele = joblib.load(modele_path)
 
 app = fastapi.FastAPI()
 
-url = 'http://127.0.0.1:8000'
+url = os.getenv('BACKEND_URL')
 
 class Donnees(BaseModel):
     longueur_sepale: float
