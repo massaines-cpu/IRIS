@@ -15,13 +15,13 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.subheader('données sur les pétales')
-    lo_pe = st.number_input('longueur de la pétale')
-    la_pe = st.number_input('largeur de la pétale')
+    lo_pe = st.number_input('longueur de la pétale', value=None)
+    la_pe = st.number_input('largeur de la pétale', value=None)
 
 with col2:
     st.subheader('données sur les sépales')
-    lo_se = st.number_input('longueur de la sépale')
-    la_se = st.number_input('largeur de la sépale')
+    lo_se = st.number_input('longueur de la sépale', value=None)
+    la_se = st.number_input('largeur de la sépale', value=None)
 
 if st.button('envoyer'):
     response = requests.post(f"{url}/predict",
