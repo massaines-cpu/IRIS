@@ -8,7 +8,7 @@ modele = joblib.load(modele_path)
 
 app = fastapi.FastAPI()
 
-url = "http://127.0.0.1:8000"
+url = 'http://127.0.0.1:8000'
 
 class Donnees(BaseModel):
     longueur_sepale: float
@@ -20,7 +20,7 @@ class Donnees(BaseModel):
 def ok_daccord():
     return {'status': 'ok'}
 
-@app.post("/predict")
+@app.post('/predict')
 def prediction(data: Donnees):
     fleur = [[
         data.longueur_sepale,
