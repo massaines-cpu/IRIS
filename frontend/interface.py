@@ -4,7 +4,7 @@ import streamlit as st
 import requests
 import os
 
-API_URL = os.getenv('BACKEND_URL')
+url = os.getenv('BACKEND_URL', 'http://localhost:8000')
 
 st.title('interface simple, basique, ordinaire, quelconque, sombre, banale et directe', text_alignment="center")
 
@@ -21,7 +21,7 @@ with col2:
     la_se = st.number_input('largeur de la sépale')
 
 if st.button('envoyer'):
-    response = requests.post(f"{API_URL}/predict",
+    response = requests.post(f"{url}/predict",
                            json={'longueur_petale' : lo_pe,
                                 'largeur_petale' : la_pe,
                                 'longueur_sepale' : lo_se,

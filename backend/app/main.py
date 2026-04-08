@@ -10,7 +10,7 @@ modele = joblib.load(modele_path)
 
 app = fastapi.FastAPI()
 
-url = os.getenv('BACKEND_URL')
+url = os.getenv('BACKEND_URL', 'http://localhost:8000')
 
 class Donnees(BaseModel):
     longueur_sepale: float
