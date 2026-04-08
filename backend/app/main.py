@@ -2,7 +2,6 @@
 import fastapi
 import joblib
 from pydantic import BaseModel
-from dotenv import load_dotenv
 import os
 
 modele_path = ('./model/belles_fleurs.joblib')

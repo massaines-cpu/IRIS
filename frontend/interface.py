@@ -2,9 +2,7 @@
 
 import streamlit as st
 import requests
-import os
-
-url = os.getenv('BACKEND_URL', 'http://localhost:8000')
+from backend.app.main import url
 
 st.title('interface simple, basique, ordinaire, quelconque, sombre, banale et directe', text_alignment="center")
 
