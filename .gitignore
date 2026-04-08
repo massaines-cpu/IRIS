@@ -1,0 +1,4 @@
+.env
+.venv/
+__pycache__/
+mes_petites_fleurs/
