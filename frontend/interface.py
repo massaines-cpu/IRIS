@@ -5,8 +5,12 @@ import requests
 import os
 
 url = os.getenv('BACKEND_URL', 'http://localhost:8000')
-st.title('interface simple, basique, ordinaire, quelconque, sombre, banale et directe', text_alignment="center", color='pink')
-
+st.markdown(
+    "<h1 style='text-align: center; color: pink;'>"
+    "interface simple, basique, ordinaire, quelconque, sombre, banale et directe"
+    "</h1>",
+    unsafe_allow_html=True
+)
 col1, col2 = st.columns(2)
 
 with col1:
