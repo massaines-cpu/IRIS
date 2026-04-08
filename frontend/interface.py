@@ -28,4 +28,4 @@ if st.button('envoyer'):
                                 'largeur_sepale' : la_se })
     data = response.json()
 
-    st.write('espèce prédite:', data['prediction'])
+    st.write('espèce prédite:', data['prediction'], text_align="center")
