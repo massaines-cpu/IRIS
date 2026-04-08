@@ -3,8 +3,8 @@
 import streamlit as st
 import requests
 from backend.app.main import url
-
-st.title('interface simple, basique, ordinaire, quelconque, sombre, banale et directe', text_alignment="center", color='pink')
+#interface simple, basique, ordinaire, quelconque, sombre, banale et directe
+st.title('preuve maxime manon', text_alignment="center", color='pink')
 
 col1, col2 = st.columns(2)
 
